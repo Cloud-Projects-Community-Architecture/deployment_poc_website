@@ -1,0 +1,100 @@
+pre {
+	line-height: 1.4;
+    padding: 1.5rem 2.25rem;
+    margin: 0;
+    border-radius: 6px;
+    overflow: auto;
+	  white-space: pre-wrap;
+}
+
+.code-block-wrapper {
+	background: #282c34;
+	border-radius: 8px;
+	position: relative;
+	width: 86%;
+}
+
+.command-icon {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	color: transparent;
+	margin-left: -13px;
+	font-size: 1rem;
+	z-index: 999;
+	position: absolute;
+	left: 20px
+}
+
+.command-icon::before {
+	content: '▶';
+	font-size: 0.7rem;
+	color: #999;
+	transition: 0.25s ease-in-out opacity;
+	position: absolute;
+	left: 10px;
+	top: 4px;
+	z-index: -1;
+}
+
+.command-icon:hover {
+	cursor: pointer;
+}
+
+.command-icon:hover::before {
+	opacity: 0;
+}
+
+.command-icon:hover .command-copy {
+	opacity: 1;
+	z-index: -1;
+}
+
+.command-icon .command-copy {
+	width: 20px;
+	height: 24px;
+	top: 1px;
+	left: 4px;
+	position: absolute;
+	opacity: 0;
+	transition: 0.25s ease-in-out opacity;
+	z-index: -1;
+}
+
+.comment {
+	width: 86%;
+	text-align: left;
+}
+
+.language-icon {
+	position: absolute;
+	color: #ccc;
+	right: 10px;
+	top: 0;
+	font-family: sans-serif;
+	font-size: 0.6rem;
+}
+
+
+.token { color: #eee; }
+.output {
+	color: #bbb;
+	overflow-wrap: break-word;
+}
+
+.copied-text {
+	font-size: 2rem;
+	background-color: #A5FF76;
+	margin-top: 0.5rem;
+	width: 60%;
+	text-align: center;
+	padding: 0 2rem;
+	font-family: monospace;
+}
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
